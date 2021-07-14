@@ -13,7 +13,7 @@ Date date = new Date();
 System.out.println(date.toString());
 %>
 <body>
-Welcome ${username} your password is ${password}
+Welcome ${username} 
 </body>
 <div>Current date is <%=date%></div>
 </html>
