@@ -14,6 +14,7 @@ System.out.println(date.toString());
 %>
 <body>
 Welcome ${username} 
+your password is ${password}
 </body>
 <div>Current date is <%=date%></div>
 </html>

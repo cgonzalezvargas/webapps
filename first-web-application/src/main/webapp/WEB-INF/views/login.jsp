@@ -14,7 +14,7 @@ System.out.println(date.toString());
 %>
 <body>
 My first gay experience with ${name}
-<form action="/login.do" method="post">
+<form action="/spring-mvc/login" method="post">
 <p><font color="red">${errorMessage}</font></p>
  Username: <input type="text" name="username"/> Password: <input type="password" name="password"/> <input type="submit" value="Login"/>
 </form>
