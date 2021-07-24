@@ -13,8 +13,8 @@ Date date = new Date();
 System.out.println(date.toString());
 %>
 <body>
-Welcome ${username} 
-your password is ${password}
+Welcome ${username} <BR/>
+Now, you can <a href="/list-todos"> manage your todos</a>
 </body>
 <div>Current date is <%=date%></div>
 </html>
