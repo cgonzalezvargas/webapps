@@ -2,25 +2,41 @@
 <html>
 <head>
 <title>Todos for ${name}</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	    		rel="stylesheet">
 </head>
 <body>
+
+<div class="container">
 Hi ${username}
 
-<table>
+<table class="table table-striped">
 <caption>Your Todos</caption>
 <thead>
 <tr>
 <th>Description</th>
 <th>Target Date</th>
+<th>Is Completed?</th>
 </tr>
 </thead>
+<tbody>
+<c:forEach items="${todos}" var="todo">
+</BR>
+<tr>
+<td>${todo.desc}</td>
+<td>${todo.targetDate}</td>
+<td>${todo.done}</td>
+<td><a  href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
+</tr>
+</c:forEach>
+</tbody>
 </table>
 <!-- for(Todo todo:todos) -->
-<c:forEach items="${todos}" var="todo">
-
-${todo.id} ${todo.desc} ${todo.user}</BR>
-
-</c:forEach>
- <a class="button" href="/add-todo">Add</a>
+<div>
+ <a class="btn btn-success" href="/add-todo">Add</a>
+ </div>
+ </div>
+ <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>

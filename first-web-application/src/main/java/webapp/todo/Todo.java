@@ -2,10 +2,25 @@ package webapp.todo;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Todo 
 {
 	
-	public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
+	private int id;
+	private String user;
+	@Size(min=6, message = "Enter at least 6 characters")
+	private String desc;
+	
+	private Date targetDate;
+	private boolean isDone;
+	
+	public Todo() 
+	{
+		super();
+	}
+	public Todo(int id, String user, String desc, Date targetDate, boolean isDone) 
+	{
 		super();
 		this.id = id;
 		this.user = user;
@@ -13,11 +28,6 @@ public class Todo
 		this.targetDate = targetDate;
 		this.isDone = isDone;
 	}
-	private int id;
-	private String user;
-	private String desc;
-	private Date targetDate;
-	private boolean isDone;
 	
 	public int getId() {
 		return id;
